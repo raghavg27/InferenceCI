@@ -1,0 +1,24 @@
+version: 1
+runs_per_scenario: 3
+
+providers:
+  openai:
+    api_key_env: OPENAI_API_KEY
+  anthropic:
+    api_key_env: ANTHROPIC_API_KEY
+
+# pricing_file: pricing.yaml      # optional override; defaults to bundled
+
+thresholds:
+  cost_increase_pct: 15
+  scenario_cost_increase_pct: 25
+  ignore_below_usd: 0.001
+
+redact_prompts: true
+
+scenarios:
+  - name: example_openai
+    entrypoint: scenarios/example_openai.py:run
+    input:
+      query: "What is 2+2?"
+    timeout_seconds: 60
