@@ -1,0 +1,72 @@
+version: 1
+last_updated: 2026-05-01
+providers:
+  openai:
+    gpt-4o:
+      input_per_1m: 2.50
+      output_per_1m: 10.00
+      cached_input_per_1m: 1.25
+    gpt-4o-mini:
+      input_per_1m: 0.15
+      output_per_1m: 0.60
+      cached_input_per_1m: 0.075
+    gpt-4.1:
+      input_per_1m: 2.00
+      output_per_1m: 8.00
+      cached_input_per_1m: 0.50
+    gpt-4.1-mini:
+      input_per_1m: 0.40
+      output_per_1m: 1.60
+      cached_input_per_1m: 0.10
+    gpt-4.1-nano:
+      input_per_1m: 0.10
+      output_per_1m: 0.40
+      cached_input_per_1m: 0.025
+    o1:
+      input_per_1m: 15.00
+      output_per_1m: 60.00
+      cached_input_per_1m: 7.50
+    o1-mini:
+      input_per_1m: 1.10
+      output_per_1m: 4.40
+      cached_input_per_1m: 0.55
+    o3-mini:
+      input_per_1m: 1.10
+      output_per_1m: 4.40
+      cached_input_per_1m: 0.55
+  anthropic:
+    claude-opus-4-7:
+      input_per_1m: 15.00
+      output_per_1m: 75.00
+      cache_write_per_1m: 18.75
+      cache_read_per_1m: 1.50
+    claude-opus-4-6:
+      input_per_1m: 15.00
+      output_per_1m: 75.00
+      cache_write_per_1m: 18.75
+      cache_read_per_1m: 1.50
+    claude-sonnet-4-6:
+      input_per_1m: 3.00
+      output_per_1m: 15.00
+      cache_write_per_1m: 3.75
+      cache_read_per_1m: 0.30
+    claude-sonnet-4-5:
+      input_per_1m: 3.00
+      output_per_1m: 15.00
+      cache_write_per_1m: 3.75
+      cache_read_per_1m: 0.30
+    claude-haiku-4-5:
+      input_per_1m: 1.00
+      output_per_1m: 5.00
+      cache_write_per_1m: 1.25
+      cache_read_per_1m: 0.10
+    claude-3-5-sonnet-20241022:
+      input_per_1m: 3.00
+      output_per_1m: 15.00
+      cache_write_per_1m: 3.75
+      cache_read_per_1m: 0.30
+    claude-3-5-haiku-20241022:
+      input_per_1m: 0.80
+      output_per_1m: 4.00
+      cache_write_per_1m: 1.00
+      cache_read_per_1m: 0.08
