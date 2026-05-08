@@ -65,7 +65,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with: { fetch-depth: 0 }
-      - uses: InferenceLabs/costdiff-action@v1
+      - uses: raghavg27/costdiff-action@v1
         with:
           config-path: costdiff.yaml
         env:

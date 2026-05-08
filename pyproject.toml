@@ -41,8 +41,8 @@ dev = [
 costdiff = "inferenceci.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/InferenceLabs/InferenceCI"
-Issues = "https://github.com/InferenceLabs/InferenceCI/issues"
+Homepage = "https://github.com/raghavg27/InferenceCI"
+Issues = "https://github.com/raghavg27/InferenceCI/issues"
 
 [build-system]
 requires = ["hatchling>=1.24"]

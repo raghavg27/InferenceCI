@@ -11,7 +11,7 @@ on every `v*` tag pushed to GitHub. It uses **PyPI Trusted Publishers**
    - "Add a new pending publisher"
    - Fields:
      - PyPI Project Name: `inferenceci`
-     - Owner: `InferenceLabs`
+     - Owner: `raghavg27`
      - Repository name: `InferenceCI`
      - Workflow name: `release.yml`
      - Environment name: `pypi`
