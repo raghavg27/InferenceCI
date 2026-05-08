@@ -1,0 +1,40 @@
+version: 1
+runs_per_scenario: 3
+
+providers:
+  openai:
+    api_key_env: OPENAI_API_KEY
+  anthropic:
+    api_key_env: ANTHROPIC_API_KEY
+
+thresholds:
+  cost_increase_pct: 15
+  scenario_cost_increase_pct: 25
+  ignore_below_usd: 0.001
+
+redact_prompts: true
+
+scenarios:
+  - name: openai_single_shot
+    entrypoint: scenarios/openai_single.py:run
+    input:
+      model: gpt-4o-mini
+      query: "Reply with the single word 'pong'."
+      max_tokens: 16
+    timeout_seconds: 60
+
+  - name: anthropic_single_shot
+    entrypoint: scenarios/anthropic_single.py:run
+    input:
+      model: claude-haiku-4-5
+      query: "Reply with the single word 'pong'."
+      max_tokens: 16
+    timeout_seconds: 60
+
+  - name: multistep_agent_3_steps
+    entrypoint: scenarios/multistep_agent.py:run
+    input:
+      model: gpt-4o-mini
+      topic: gradient descent
+      steps: 3
+    timeout_seconds: 180
